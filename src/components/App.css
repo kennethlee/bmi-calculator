@@ -1,0 +1,22 @@
+.main {
+  background-color: #F9CDAD;
+  margin: auto;
+  width: 30%;
+  margin-top: 40px;
+  padding: 0 0 20px 0;
+  border: 5px solid #FF686B;
+  border-radius: 0.25em;
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  color: #556270;
+}
+
+.body {
+  background-color: #FC9D9A;
+  margin: 0.4em 0.4em -1em 0.4em;
+}

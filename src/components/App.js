@@ -27,11 +27,12 @@ export default class App extends Component {
   }
 
   render() {
-    return (<div className={styles.app}>
-      <h2 className={styles.center}>BMI Calculator</h2>
-      <InputForm handleFormSubmit={this.handleFormSubmit} />
-      <Result {...this.state} />
-      <button onClick={this.onClickReset}>Reset</button>
+    return (<div className={`${styles.main} text-center`}>
+      <h2 className={`${styles.title} text-center`}>BMI Calculator</h2>
+      <div className={`${styles.body}`}>
+        <Result {...this.state} />
+        <InputForm handleFormSubmit={this.handleFormSubmit} />
+      </div>
     </div>);
   }
 }
