@@ -41,9 +41,11 @@ export default class InputForm extends Component {
     return (<form onSubmit={this.onFormSubmit}>
       <input
         placeholder="Your height (inches)"
+        value={this.state.height}
         onChange={this.onHeightChange}
       />
       <input
+        value={this.state.weight}
         placeholder="Your Weight (pounds)"
         onChange={this.onWeightChange}
       />
