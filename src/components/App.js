@@ -13,6 +13,7 @@ export default class App extends Component {
     };
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.onClickReset = this.onClickReset.bind(this);
   }
 
   handleFormSubmit(height, weight) {
@@ -37,6 +38,7 @@ export default class App extends Component {
       <h3>BMI Calculator</h3>
       <InputForm handleFormSubmit={this.handleFormSubmit} />
       <Result {...this.state} />
+      <button onClick={this.onClickReset}>Reset</button>
     </div>);
   }
 }
