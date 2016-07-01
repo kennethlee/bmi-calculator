@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import styles from './App.css';
 import InputForm from './InputForm';
 import Result from './Result';
 
@@ -34,8 +35,8 @@ export default class App extends Component {
   }
 
   render() {
-    return (<div>
-      <h3>BMI Calculator</h3>
+    return (<div className={styles.app}>
+      <h2 className={styles.center}>BMI Calculator</h2>
       <InputForm handleFormSubmit={this.handleFormSubmit} />
       <Result {...this.state} />
       <button onClick={this.onClickReset}>Reset</button>
