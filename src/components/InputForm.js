@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './InputForm.css';
 
 export default class InputForm extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class InputForm extends Component {
     this.state = {
       height: '',
       weight: '',
-    }
+    };
 
     this.onHeightChange = this.onHeightChange.bind(this);
     this.onWeightChange = this.onWeightChange.bind(this);
@@ -33,23 +34,38 @@ export default class InputForm extends Component {
       this.setState({
         height: '',
         weight: '',
-      })
+      });
     }
   }
 
   render() {
-    return (<form onSubmit={this.onFormSubmit}>
-      <input
-        placeholder="Your height (inches)"
-        value={this.state.height}
-        onChange={this.onHeightChange}
-      />
-      <input
-        value={this.state.weight}
-        placeholder="Your Weight (pounds)"
-        onChange={this.onWeightChange}
-      />
-      <button type="submit">Submit</button>
+    return (<form onSubmit={this.onFormSubmit} className="form-inline">
+      <div className="form-group">
+        <input
+          type="text"
+          className={`${styles.input} form-control`}
+          value={this.state.height}
+          onChange={this.onHeightChange}
+          placeholder="Height (inches)"
+        />
+      </div>
+      <br />
+      <div className="form-group">
+        <input
+          type="text"
+          className={`${styles.input} form-control`}
+          value={this.state.weight}
+          onChange={this.onWeightChange}
+          placeholder="Weight (pounds)"
+        />
+      </div>
+      <br />
+      <button
+        type="submit"
+        className={`${styles.butt} btn btn-default`}
+      >
+        Submit
+      </button>
     </form>);
   }
 }
