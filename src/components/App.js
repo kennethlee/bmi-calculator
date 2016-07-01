@@ -14,7 +14,6 @@ export default class App extends Component {
     };
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-    this.onClickReset = this.onClickReset.bind(this);
   }
 
   handleFormSubmit(height, weight) {
@@ -25,13 +24,6 @@ export default class App extends Component {
 
     console.log('Height is', this.state.height);
     console.log('Weight is', this.state.weight);
-  }
-
-  onClickReset(event) {
-    this.setState({
-      height: '',
-      weight: '',
-    });
   }
 
   render() {
