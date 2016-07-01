@@ -12,6 +12,13 @@ module.exports = {
         test: /\.js?$/,
         exclude: /node_modules/,
         loader: 'react-hot!babel',
+      }, {
+        test: /\.css/,
+        loaders: [
+          'style',
+          'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]',
+          'postcss',
+        ],
       },
     ],
   },
